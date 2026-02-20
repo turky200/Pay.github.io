@@ -273,6 +273,11 @@ body::after {
 }
 
 
+
+
+
+
+
 /* ==========================
    ULTRA PREMIUM PRODUCT CARD
    ========================== */
@@ -347,6 +352,12 @@ body::after {
 
 
 
+
+
+
+
+
+
 /* ==========================
    SEAMLESS FLOWING TITLE LINE
    ========================== */
@@ -388,6 +399,9 @@ body::after {
     from { background-position: 0% 0; }
     to   { background-position: -300% 0; }
 }
+
+
+
 
 
 
@@ -447,3 +461,232 @@ body::after {
 
 
 
+
+
+
+
+/* ==========================
+   PREMIUM FOOTER
+   ========================== */
+
+footer {
+    background: rgba(12, 12, 20, 0.85) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow خفيف أعلى الفوتر */
+footer::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(146,0,219,0.25), transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+
+
+.footer-widget .section-title .title {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-widget .section-title {
+    border-bottom: none !important;
+}
+
+
+
+.footer-menu li a {
+    color: #aaa !important;
+    transition: all 0.3s ease;
+}
+
+.footer-menu li a:hover {
+    color: #fff !important;
+    padding-right: 6px;
+    text-shadow: 0 0 8px rgba(146,0,219,0.6);
+}
+
+
+
+.social-network ul li a {
+    color: #bbb;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-network ul li a:hover {
+    color: #fff;
+    transform: translateY(-4px);
+    text-shadow: 0 0 12px rgba(146,0,219,0.8);
+}
+
+
+
+
+
+.coppy-right {
+    background: rgba(8, 8, 14, 0.95) !important;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+
+
+
+
+
+
+/* ==========================
+   PRODUCT PAGE PRICE
+   ========================== */
+
+.product-price {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+}
+
+.product-price .onsale {
+    color: #b980ff !important;
+}
+
+
+
+
+
+
+/* ==========================
+   PRODUCT MAIN BUTTON
+   ========================== */
+
+.product-details .add-to-cart-btn,
+.product-details button[type="submit"] {
+
+    background: linear-gradient(135deg, #9200db, #5f00ff) !important;
+    border: none !important;
+    border-radius: 16px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 14px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.product-details .add-to-cart-btn:hover,
+.product-details button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(146,0,219,0.7);
+}
+
+
+
+
+
+/* ==========================
+   TRUST BADGE
+   ========================== */
+
+.trust-box {
+    margin-top: 18px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: rgba(146,0,219,0.1);
+    border: 1px solid rgba(146,0,219,0.3);
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+
+/* ==========================
+   GLOBAL TEXT COLOR FIX
+   ========================== */
+
+/* النصوص العامة */
+body,
+p,
+span,
+li,
+td,
+th,
+label {
+    color: #d6d6e3 !important;
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+/* اسم المنتج */
+.product-card .title a,
+.product-details h1,
+.product-details h2 {
+    color: #ffffff !important;
+}
+
+/* النصوص الثانوية */
+small,
+.text-muted {
+    color: #9a9ab3 !important;
+}
+
+/* الروابط */
+a {
+    color: #b980ff;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* ==========================
+   DARK CART FIX
+   ========================== */
+
+/* خلفية السلة */
+rmz-ui-store,
+[data-rmz-core],
+.rmz-cart,
+.rmz-drawer,
+.ant-drawer-content,
+.ant-modal-content {
+
+    background: #11111b !important;
+    color: #ffffff !important;
+}
+
+/* النصوص داخل السلة */
+.ant-drawer-content *,
+.ant-modal-content *,
+.rmz-cart * {
+    color: #e0e0f0 !important;
+}
+
+/* عناوين داخل السلة */
+.ant-drawer-title,
+.ant-modal-title {
+    color: #ffffff !important;
+}
+
+/* حدود خفيفة */
+.ant-drawer-header,
+.ant-modal-header {
+    background: #151524 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
