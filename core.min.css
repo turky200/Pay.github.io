@@ -271,3 +271,76 @@ body::after {
     0% { transform: rotate(0deg) scale(1); }
     100% { transform: rotate(360deg) scale(1.2); }
 }
+
+
+/* ==========================
+   ULTRA PREMIUM PRODUCT CARD
+   ========================== */
+
+.product-card {
+    position: relative;
+    background: rgba(18, 18, 28, 0.75) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px !important;
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: visible !important;
+    transition: transform 0.4s ease;
+}
+
+/* طبقة التوهج المحيطي */
+.product-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: radial-gradient(circle at center, rgba(146,0,219,0.45), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    filter: blur(25px);
+}
+
+/* تأثير hover */
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+/* الصورة */
+.product-thumbnail img {
+    transition: transform 0.5s ease;
+    border-radius: 16px;
+}
+
+.product-card:hover .product-thumbnail img {
+    transform: scale(1.06);
+}
+
+/* العنوان */
+.product-card .title a {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* السعر */
+.product-price {
+    color: #b980ff !important;
+}
+
+/* زر احترافي */
+.add-to-cart-btn {
+    background: rgba(146,0,219,0.15) !important;
+    border: 1px solid rgba(146,0,219,0.4) !important;
+    color: #fff !important;
+    border-radius: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.add-to-cart-btn:hover {
+    background: #9200db !important;
+    box-shadow: 0 0 25px rgba(146,0,219,0.6);
+}
