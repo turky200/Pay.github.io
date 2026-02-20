@@ -344,3 +344,47 @@ body::after {
     background: #9200db !important;
     box-shadow: 0 0 25px rgba(146,0,219,0.6);
 }
+
+
+
+/* ==========================
+   SEAMLESS FLOWING TITLE LINE
+   ========================== */
+
+.section-title .title {
+    position: relative;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+/* الخط */
+.section-title .title::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #9200db 0%,
+        #5f00ff 25%,
+        #00f0ff 50%,
+        #5f00ff 75%,
+        #9200db 100%
+    );
+
+    background-size: 300% 100%;
+    animation: smoothFlow 6s linear infinite;
+}
+
+/* حركة بدون قفزة */
+@keyframes smoothFlow {
+    from { background-position: 0% 0; }
+    to   { background-position: -300% 0; }
+}
