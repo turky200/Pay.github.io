@@ -388,3 +388,62 @@ body::after {
     from { background-position: 0% 0; }
     to   { background-position: -300% 0; }
 }
+
+
+
+
+
+/* ==============================
+   PREMIUM HEADER UPGRADE
+   ============================== */
+
+.header-middle {
+    background: rgba(15, 15, 25, 0.75) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
+}
+
+/* خط سفلي متدرج */
+.header-middle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #9200db,
+        #5f00ff,
+        transparent
+    );
+    opacity: 0.6;
+}
+
+/* تصغير عند النزول */
+.header-middle.is-sticky {
+    background: rgba(12,12,20,0.9) !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+.main-menu > li > a {
+    color: #ccc !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.main-menu > li > a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(146,0,219,0.6);
+}
+
+.cart-block .badge {
+    background: linear-gradient(135deg, #9200db, #5f00ff);
+    box-shadow: 0 0 15px rgba(146,0,219,0.6);
+}
+
+
+
