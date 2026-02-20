@@ -1075,6 +1075,66 @@ label:hover .plan-card::before {
     color: #cfcfe8 !important;
     font-size: 15px !important;
     line-height: 1.9;
+} 
+
+
+
+
+
+
+
+
+
+/*  فقط الكروت اللي تحتوي صور باقات بلسlink-grid-item */
+.bg-white.theme1 .link-grid-item {
+    width: 100%;
+}
+
+/* نخلي العمود اللي يحتويها نص الشاشة */
+.bg-white.theme1 .link-grid-item {
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    /* نستهدف فقط الأعمدة اللي بداخلها link-grid-item */
+    .bg-white.theme1 .col-12:has(.link-grid-item) {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+
+}
+
+
+
+
+
+/* شكل نظيف بدون ظل */
+.link-card {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.8s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* حركة الدخول */
+.link-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تأثير hover / لمس */
+.link-card:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* الصورة متجاوبة */
+.link-card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -1083,3 +1143,125 @@ label:hover .plan-card::before {
 
 
 
+/* نخلي البنر Full width حقيقي */
+section.py-10 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+section.py-10 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* إذا الهيدر fixed نخلي المحتوى يبدأ بعده */
+#sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* هذا هو الحل الحقيقي */
+body {
+    padding-top: 67px; /* 👈 غير الرقم حسب ارتفاع الهيدر عندك */
+}
+
+
+
+
+/* البنر يمتد عرض كامل الشاشة */
+section.py-10 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+/* الصورة تاخذ كامل عرض البنر */
+section.py-10 img {
+    width: 100vw;
+    max-width: 100vw;
+    display: block;
+}
+
+
+
+
+
+
+
+/* تقيمات المتجر يوجد js  */
+.custom-know-more {
+    background: linear-gradient(180deg, #161317 0%, #1c1822 100%);
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+.custom-know-more .know-wrapper {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.custom-know-more .know-title {
+    font-size: 26px;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+/* 🔥 نخليهم 3 أعمدة دائمًا حتى بالجوال */
+.custom-know-more .injazes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.custom-know-more .injaz {
+    text-align: center;
+    transition: transform 0.4s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* حركة ظهور */
+.custom-know-more .injaz.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* أيقونات */
+.custom-know-more .injaz img {
+    width: 45px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+    transition: transform 0.3s ease;
+}
+
+.custom-know-more .injaz:hover img {
+    transform: scale(1.1);
+}
+
+.custom-know-more .injaz-count {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.custom-know-more .injaz-label {
+    margin-top: 6px;
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+
+.counter-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
