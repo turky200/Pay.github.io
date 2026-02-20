@@ -104,10 +104,13 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+
 /* موبايل */
 @media (max-width: 768px) {
-    body {
-        padding-top: 75px;
+    body::before {
+        animation: none !important;
+        filter: blur(60px) !important;
     }
 }
 
@@ -229,7 +232,200 @@ section {
 }
 
 
+/* ==========================
+   CLEAN LUXURY MOBILE MENU
+   ========================== */
 
+/* الحاوية */
+#offcanvas-mobile-menu {
+    background: linear-gradient(180deg, #0f0f18, #0b0b12) !important;
+    border-left: 1px solid rgba(255,255,255,0.06);
+    box-shadow: -15px 0 50px rgba(0,0,0,0.75);
+}
+
+/* المحتوى */
+#offcanvas-mobile-menu .inner {
+    padding: 30px 25px;
+}
+
+/* إزالة أي خطوط أو ديكوريشن */
+#offcanvas-mobile-menu a {
+    text-decoration: none !important;
+}
+
+#offcanvas-mobile-menu .offcanvas-menu ul li {
+    border: none !important;
+    margin-bottom: 18px;
+}
+
+/* الروابط */
+#offcanvas-mobile-menu .offcanvas-menu ul li a {
+    display: block;
+    padding: 10px 0;
+    background: transparent !important;
+    color: #e8e8f5 !important;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover ناعم */
+#offcanvas-mobile-menu .offcanvas-menu ul li a:hover {
+    color: #ffffff !important;
+    transform: translateX(-5px);
+}
+
+/* أيقونة السلة */
+#offcanvas-mobile-menu .icon-bag {
+    color: #c084fc !important;
+    margin-left: 6px;
+}
+
+/* ==========================
+   ULTRA GLOW CLOSE BUTTON
+   ========================== */
+
+#offcanvas-mobile-menu .offcanvas-close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #c084fc !important;
+    background: rgba(146,0,219,0.12) !important;
+
+    border: 1px solid rgba(146,0,219,0.4);
+    border-radius: 14px;
+
+    cursor: pointer;
+    z-index: 2;
+
+    transition: all 0.3s ease;
+}
+
+/* توهج خلفي */
+#offcanvas-mobile-menu .offcanvas-close::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 16px;
+    background: radial-gradient(circle, rgba(146,0,219,0.45), transparent 70%);
+    filter: blur(10px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* Hover */
+#offcanvas-mobile-menu .offcanvas-close:hover {
+    color: #ffffff !important;
+    background: rgba(146,0,219,0.25) !important;
+    box-shadow: 0 0 20px rgba(146,0,219,0.6);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* حركة تنفس */
+@keyframes closePulse {
+    0% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.15); }
+    100% { opacity: 0.4; transform: scale(1); }
+}
+
+/* تثبيت زر الإغلاق أعلى اليمين */
+#offcanvas-mobile-menu .border-bottom {
+    display: flex;
+    justify-content: flex-end !important; /* يمين */
+    align-items: center;
+}
+
+/* إلغاء أي محاذاة سابقة */
+#offcanvas-mobile-menu .border-bottom.text-end {
+    text-align: right !important;
+}
+
+/* تأكيد تمركز الزر */
+#offcanvas-mobile-menu .offcanvas-close {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* ==========================
+   SOCIAL LINKS
+   ========================== */
+
+#offcanvas-mobile-menu .offcanvas-social ul li a {
+    color: #aaa !important;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#offcanvas-mobile-menu .offcanvas-social ul li a:hover {
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(146,0,219,0.7);
+}
+
+/* ==========================
+   CLEAN PREMIUM MOBILE MENU
+   ========================== */
+
+#offcanvas-mobile-menu {
+    background: linear-gradient(180deg, #0f0f18, #0b0b12) !important;
+    border-left: 1px solid rgba(255,255,255,0.06);
+    box-shadow: -15px 0 50px rgba(0,0,0,0.7);
+}
+
+/* الروابط بدون مربعات */
+#offcanvas-mobile-menu .offcanvas-menu ul li a {
+    display: block;
+    padding: 14px 0;
+    margin-bottom: 14px;
+    background: transparent !important;
+    border-radius: 0 !important;
+    color: #e5e5f0 !important;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .3s ease;
+    position: relative;
+}
+
+/* خط أنيق عند المرور */
+#offcanvas-mobile-menu .offcanvas-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #9200db, #5f00ff);
+    transition: width .3s ease;
+}
+
+#offcanvas-mobile-menu .offcanvas-menu ul li a:hover {
+    color: #ffffff !important;
+    transform: translateX(-4px);
+}
+
+#offcanvas-mobile-menu .offcanvas-menu ul li a:hover::after {
+    width: 40%;
+}
+
+/* زر الإغلاق */
+#offcanvas-mobile-menu .offcanvas-close {
+    color: #ffffff !important;
+    background: transparent !important;
+    font-size: 26px;
+}
+
+#offcanvas-mobile-menu .offcanvas-close:hover {
+    color: #c084fc !important;
+}
 
 
 /* ================================
@@ -585,7 +781,7 @@ footer::before {
 .product-details button[type="submit"]:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(146,0,219,0.7);
-}
+} 
 
 
 
@@ -656,7 +852,7 @@ a:hover {
 
 
 /* ==========================
-   DARK CART FIX
+   DARK CART FIX تحت المراجعه بنعدله ؟
    ========================== */
 
 /* خلفية السلة */
@@ -690,3 +886,200 @@ rmz-ui-store,
     background: #151524 !important;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+
+
+
+/* ==========================
+   PREMIUM SUBSCRIPTION CARDS FIXED
+   ========================== */
+
+.plan_item {
+    display: none;
+}
+
+/* الكرت */
+.plan-card {
+    position: relative;
+    background: rgba(20,20,30,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* تأثير التوهج */
+.plan-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(146,0,219,0.25), transparent 70%);
+    opacity: 0;
+    transition: 0.4s ease;
+    pointer-events: none; /* يمنع تعطيل الضغط */
+}
+
+/* Hover */
+label:hover .plan-card {
+    transform: translateY(-8px);
+    border: 1px solid rgba(146,0,219,0.5);
+}
+
+label:hover .plan-card::before {
+    opacity: 1;
+}
+
+/* عند الاختيار */
+.plan_item:checked + label .plan-card {
+    border: 2px solid #9200db;
+    box-shadow: 0 0 30px rgba(146,0,219,0.5);
+    transform: translateY(-6px);
+}
+
+/* اسم الخطة */
+.plan-card .card-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* السعر */
+.plan-card .card-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #9200db;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   WIDER LAYOUT (MALAK STYLE)
+   ========================== */
+
+/* ===== LEVEL 3 - Ultra Wide ===== */
+
+.container,
+.container-lg,
+.container-xl {
+    max-width: 1550px !important;
+}
+
+
+
+/* توسعة صفحة المنتج أكثر */
+.product-details {
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* توسعة الأقسام */
+.section {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* توسعة الهيدر */
+.header-middle .container {
+    max-width: 1500px !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   PREMIUM DARK FAQ - FINAL الاسئلة الشائعة
+   ========================== */
+
+/* الحاوية */
+.faq-accordion {
+    max-width: 1100px !important;
+    margin: 0 auto;
+}
+
+/* الكرت */
+.faq-item {
+    background: rgba(20,20,30,0.6) !important;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(146,0,219,0.25) !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* عند المرور */
+.faq-item:hover {
+    border-color: rgba(146,0,219,0.6) !important;
+    box-shadow: 0 0 30px rgba(146,0,219,0.2);
+}
+
+/* زر السؤال */
+.faq-question {
+    background: transparent !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+/* النص داخل الزر */
+.faq-question span {
+    color: #ffffff !important;
+}
+
+/* يتحول أسود فقط عند المرور إذا لم يكن مفتوح */
+.faq-item:hover .faq-question:not([aria-expanded="true"]),
+.faq-item:hover .faq-question:not([aria-expanded="true"]) span {
+    color: #000000 !important;
+}
+
+/* إذا مفتوح يرجع أبيض حتى لو الماوس فوقه */
+.faq-question[aria-expanded="true"],
+.faq-question[aria-expanded="true"] span {
+    color: #ffffff !important;
+}
+
+/* أيقونة السهم */
+.faq-icon {
+    color: #b980ff !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* لف السهم عند الفتح */
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+    color: #b980ff !important;
+}
+
+/* الجواب */
+.faq-answer {
+    background: rgba(15,15,25,0.6) !important;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    color: #cfcfe8 !important;
+    font-size: 15px !important;
+    line-height: 1.9;
+}
+
+
+
+
+
+
+
