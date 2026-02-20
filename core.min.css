@@ -200,3 +200,74 @@ div[style*="background: #fff"],
 div[style*="background-color: #fff"] {
     background: #141420 !important;
 }
+
+
+
+/* =========================
+إزالة الخلفيات
+   ========================= */
+
+/* إزالة الخلفيات البيضاء */
+.bg-white,
+.theme1,
+section,
+.footer-bottom,
+footer,
+.container {
+    background: transparent !important;
+}
+
+/* لو فيه سكاشن محددة */
+section.bg-white {
+    background: transparent !important;
+}
+
+/* نخلي المحتوى فوق الخلفية */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+/* ================================
+   ULTRA PREMIUM BACKGROUND
+   ================================ */
+
+body {
+    background: #07070d;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Aurora Layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    z-index: -3;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(146,0,219,0.45), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(90, 40, 255, 0.35), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04), transparent 60%);
+    animation: auroraMove 25s linear infinite alternate;
+    filter: blur(120px);
+}
+
+/* Subtle Glow */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(circle at center, rgba(146,0,219,0.15), transparent 70%);
+    pointer-events: none;
+}
+
+/* Aurora motion */
+@keyframes auroraMove {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1.2); }
+}
