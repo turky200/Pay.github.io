@@ -610,27 +610,27 @@ footer::before {
 /* ==========================
    GLOBAL TEXT COLOR FIX
    ========================== */
+/* ==========================
+   GLOBAL TEXT FIX (SAFE)
+   ========================== */
 
-/* النصوص العامة */
-body,
-p,
-span,
-li,
-td,
-th,
-label {
-    color: #d6d6e3 !important;
+/* النصوص خارج نظام RMZ فقط */
+body:not(rmz-ui-store) p,
+body:not(rmz-ui-store) span,
+body:not(rmz-ui-store) li,
+body:not(rmz-ui-store) label {
+
+    color: #d6d6e3;
 }
 
 /* العناوين */
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 /* اسم المنتج */
 .product-card .title a,
-.product-details h1,
-.product-details h2 {
+.product-details h1 {
     color: #ffffff !important;
 }
 
