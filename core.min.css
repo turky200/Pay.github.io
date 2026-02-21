@@ -1265,3 +1265,122 @@ section.py-10 img {
     align-items: center;
     gap: 2px;
 }
+
+
+
+
+
+
+
+/* =====================================
+   🔥 ULTRA NEON TERMS PAGE
+===================================== */
+
+.bg-white.pt-20.pb-20{
+    background: transparent !important;
+    padding:120px 20px !important;
+}
+
+/* الكرت الرئيسي */
+.bg-white.pt-20.pb-20 .container{
+    max-width:1000px;
+    background:rgba(18,18,28,0.75);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(146,0,219,0.35);
+    border-radius:28px;
+    padding:70px 60px;
+    box-shadow:0 0 80px rgba(146,0,219,0.18);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Glow خلفي خفيف */
+.bg-white.pt-20.pb-20 .container::before{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    background:radial-gradient(circle, rgba(146,0,219,0.25), transparent 60%);
+    filter:blur(120px);
+    z-index:-1;
+}
+
+/* العناوين الرئيسية */
+.bg-white h2{
+    font-size:30px;
+    margin-top:60px;
+    margin-bottom:25px;
+    color:#ffffff;
+    text-align:center;
+    position:relative;
+    display:inline-block;
+}
+
+/* خط نيون تحت العنوان */
+.bg-white h2::after{
+    content:"";
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:3px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#9200db,#5f00ff,#00f0ff,#5f00ff,#9200db);
+    background-size:300% 100%;
+    animation:neonLine 6s linear infinite;
+}
+
+/* حركة الخط */
+@keyframes neonLine{
+    from{background-position:0% 0;}
+    to{background-position:-300% 0;}
+}
+
+
+
+/* النصوص */
+.bg-white p{
+    color:#dcdcf5;
+    line-height:2.1;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+/* القوائم */
+.bg-white ul,
+.bg-white ol{
+    margin:25px 0;
+    padding-right:25px;
+}
+
+.bg-white li{
+    margin-bottom:14px;
+    color:#e6e6ff;
+    position:relative;
+}
+
+/* نقطة نيون قبل كل عنصر */
+.bg-white li::marker{
+    color:#b980ff;
+}
+
+/* تمييز اسم المتجر */
+.bg-white span{
+    color:#b980ff;
+    font-weight:600;
+    text-shadow:0 0 8px rgba(146,0,219,0.6);
+}
+
+
+
+/* إزالة الفراغات الزائدة */
+.bg-white br{
+    display:none;
+}
+
+
+.breadcrumb-item,
+.breadcrumb-item a {
+    color: #ffffff !important;
+    text-shadow: 0 0 6px rgba(146,0,219,0.6);
+}
