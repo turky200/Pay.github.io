@@ -1316,19 +1316,7 @@ section.py-10 img {
 }
 
 /* خط نيون تحت العنوان */
-.bg-white h2::after{
-    content:"";
-    position:absolute;
-    bottom:-12px;
-    left:50%;
-    transform:translateX(-50%);
-    width:80px;
-    height:3px;
-    border-radius:20px;
-    background:linear-gradient(90deg,#9200db,#5f00ff,#00f0ff,#5f00ff,#9200db);
-    background-size:300% 100%;
-    animation:neonLine 6s linear infinite;
-}
+
 
 /* حركة الخط */
 @keyframes neonLine{
@@ -1583,31 +1571,35 @@ section.py-10 img {
 
 
 /* =========================
-   TITLE LINE FIX CENTERED
+الي تحت يعدل خط التوهج تحت النص 
 ========================= */
 
-.section-title {
-    text-align: center; /* يخلي العنوان في النص */
+/* =========================
+   PERFECT CENTERED TITLE LINE
+========================= */
+
+.section-title{
+    text-align: center !important;
 }
 
-.section-title .title {
+.section-title .title{
     position: relative;
-    display: inline-block; /* مهم جداً */
+    display: inline-block;
+    margin: 0 auto;
 }
 
-.section-title .title::after {
+.section-title .title::after{
     content: "";
     position: absolute;
-    bottom: -10px;
-    left: 50%;             /* بدل right */
-    transform: translateX(-50%); /* يخليه في النص */
-    width: 100px;           /* طول ثابت أنيق */
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;   /* هذا السر */
+    width: 110px;
     height: 3px;
     border-radius: 20px;
     background: linear-gradient(90deg,#9200db,#5f00ff,#00f0ff);
 }
-
-
 
 
 
@@ -1691,4 +1683,27 @@ section.py-10 img {
 .section-title{
     margin-top: 0 !important;
     padding-top: 0 !important;
+}
+
+
+
+
+
+
+
+/* =====================================
+   🔥 صفحة الشروط ومن نحن واقرار ومسؤولية
+===================================== */
+
+/* خط فقط داخل صفحة الشروط */
+.bg-white.pt-20.pb-20 h2::after{
+    content:"";
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:3px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#9200db,#5f00ff,#00f0ff,#5f00ff,#9200db);
 }
