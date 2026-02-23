@@ -1606,3 +1606,89 @@ section.py-10 img {
     border-radius: 20px;
     background: linear-gradient(90deg,#9200db,#5f00ff,#00f0ff);
 }
+
+
+
+
+
+/* =====والتصنيف في الاقسام  تعديل شريط الفرز ===== */
+
+
+.grid-nav-wraper{
+    background: rgba(146,0,219,0.08) !important; /* خلفية بنفسجية خفيفة */
+    border: 1px solid rgba(146,0,219,0.25);
+    border-radius: 14px;
+    padding: 18px 20px;
+    
+    /* رفعه للأعلى */
+    margin-top: -25px !important; 
+}
+
+/* النص */
+.grid-nav-wraper span{
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* كلمة تصنيف */
+.grid-nav-wraper .sort-by{
+    color: #c084fc !important;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+/* select */
+.grid-nav-wraper select{
+    background: #141420 !important;
+    color: #ffffff !important;
+    border: 0px solid rgba(146,0,219,0.4) !important;
+    border-radius: 10px !important;
+    padding: 6px 12px;
+}
+
+/* عند الضغط */
+.grid-nav-wraper select:focus{
+    box-shadow: 0 0 15px rgba(146,0,219,0.4) !important;
+    border-color: #9200db !important;
+}
+
+/* السهم */
+.grid-nav-wraper select option{
+    background: #141420;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تقليل مساحة عنوان القسم */
+.breadcrumb-section {
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+    background: transparent !important;
+}
+
+
+
+/* إزالة أي فراغ تحت custom-know-more */
+.custom-know-more{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* إزالة أي فراغ فوق section-title */
+.custom-know-more + .section-title,
+.section-title{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
