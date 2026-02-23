@@ -1384,3 +1384,225 @@ section.py-10 img {
     color: #ffffff !important;
     text-shadow: 0 0 6px rgba(146,0,219,0.6);
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM FOOTER SOCIAL
+========================= */
+
+.social-network ul {
+    gap: 15px;
+}
+
+.social-network ul li a {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(146,0,219,0.15);
+    border: 1px solid rgba(146,0,219,0.4);
+    color: #ffffff !important;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-network ul li a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(146,0,219,0.7);
+}
+
+
+/* =========================
+   CERTIFICATION BADGES
+========================= */
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
+
+.cert-badge img {
+    height: 26px;
+    width: auto;
+    filter: brightness(1.2);
+}
+
+.cert-badge:hover {
+    background: rgba(146,0,219,0.15);
+    border-color: rgba(146,0,219,0.5);
+    box-shadow: 0 0 20px rgba(146,0,219,0.4);
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================
+   FOOTER LAYOUT POLISH
+========================= */
+
+.footer-bottom {
+    background: linear-gradient(180deg,#0f0f18,#0b0b12) !important;
+}
+
+.footer-widget .section-title .title {
+    font-size: 18px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-widget .section-title .title::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg,#9200db,#5f00ff);
+} 
+
+
+
+
+
+/* =========================
+   معروف
+========================= */
+.cert-strip {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,#0f0f18,#0b0b12,#0f0f18);
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* الحاوية الداخلية المتحركة */
+.cert-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* الشعارات */
+.cert-strip img {
+    height: 42px;   /* كبرناها */
+    width: auto;
+    transition: 0.4s ease;
+    opacity: 0.9;
+}
+
+/* Hover احترافي */
+.cert-strip a:hover img {
+    transform: scale(1.12);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(146,0,219,0.7));
+}
+
+
+/* =========================
+   AUTO SLIDE EFFECT
+========================= */
+
+/* =========================
+   CERT STRIP MOVING BAR
+========================= */
+
+.cert-strip {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(90deg,#0f0f18,#0b0b12,#0f0f18);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cert-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    animation: certScroll 25s linear infinite;
+}
+
+/* مهم جداً — يمنع انضغاط الصور */
+.cert-track a {
+    flex: 0 0 auto;
+}
+
+.cert-track img {
+    height: 48px;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+/* Hover */
+.cert-track a:hover img {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 18px rgba(146,0,219,0.7));
+}
+
+/* حركة الشريط */
+@keyframes certScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* الجوال */
+@media (max-width: 768px) {
+    .cert-track {
+        gap: 50px;
+        animation-duration: 18s;
+    }
+
+    .cert-track img {
+        height: 38px;
+    }
+}
+
+
+
+/* =========================
+   TITLE LINE FIX CENTERED
+========================= */
+
+.section-title {
+    text-align: center; /* يخلي العنوان في النص */
+}
+
+.section-title .title {
+    position: relative;
+    display: inline-block; /* مهم جداً */
+}
+
+.section-title .title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;             /* بدل right */
+    transform: translateX(-50%); /* يخليه في النص */
+    width: 100px;           /* طول ثابت أنيق */
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(90deg,#9200db,#5f00ff,#00f0ff);
+}
